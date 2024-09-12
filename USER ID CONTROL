@@ -6,7 +6,7 @@ public class UserController : ControllerBase
     public IActionResult GetAllowedUsers()
     {
         // Example: List of allowed users
-        var allowedUsers = new List<string> { "AllowedUser1", "AllowedUser2" };
+        var allowedUsers = new List<string> { "MAHFUZ", "AllowedUser2" };
         
         // Return as JSON
         return Ok(new { allowedUserIDs = allowedUsers });
