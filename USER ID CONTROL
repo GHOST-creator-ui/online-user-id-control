@@ -1,3 +1,14 @@
+[ApiController]
+[Route("api/[controller]")]
+public class UserController : ControllerBase
 {
-    "allowedUserIDs": ["", "A"]
+    [HttpGet("getallowedusers")]
+    public IActionResult GetAllowedUsers()
+    {
+        // Example: List of allowed users
+        var allowedUsers = new List<string> { "AllowedUser1", "AllowedUser2" };
+        
+        // Return as JSON
+        return Ok(new { allowedUserIDs = allowedUsers });
+    }
 }
